@@ -1,0 +1,14 @@
+{
+  "name": "namaste_react",
+  "version": "1.0.0",
+  "description": "true learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "akshay saini",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
