@@ -8,7 +8,7 @@ const block = React.createElement(
     React.createElement(
     "div",
     {id:"child"},
-    [React.createElement("h1", {},"i am a h1 tag"),React.createElement("h2", {},"i am a h2 tag")]
+    [React.createElement("h1", {},"ep -02 igniting app with parcel"),React.createElement("h2", {},"i am a h2 tag")]
 ),
    React.createElement(
     "div",

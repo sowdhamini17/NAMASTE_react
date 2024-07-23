@@ -2962,7 +2962,7 @@ const block = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
     /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
         id: "child"
     }, [
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {}, "i am a h1 tag"),
+        /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {}, "ep -02 igniting app with parcel"),
         /*#__PURE__*/ (0, _reactDefault.default).createElement("h2", {}, "i am a h2 tag")
     ]),
     /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {

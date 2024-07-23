@@ -2,8 +2,10 @@
   "name": "namaste_react",
   "version": "1.0.0",
   "description": "true learning",
-  "main": "index.js",
+  
   "scripts": {
+    "start": "parcel ig.html",
+    "build":"parcel build ig.html",
     "test": "jest"
   },
   "author": "akshay saini",
