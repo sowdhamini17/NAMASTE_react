@@ -4,8 +4,8 @@
   "description": "true learning",
   
   "scripts": {
-    "start": "parcel ig.html",
-    "build":"parcel build ig.html",
+    "start": "parcel lay.html",
+    "build":"parcel build lay.html",
     "test": "jest"
   },
   "author": "akshay saini",
