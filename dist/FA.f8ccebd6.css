@@ -1,0 +1,59 @@
+.navbar {
+  border: 2px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+#navi_tems {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: sans-serif;
+  padding: 1px 40px 1px 1px;
+  display: flex;
+}
+
+.search_bar {
+  margin-left: 200px;
+  padding: 10px;
+}
+
+.Res_card {
+  background-color: #faebd7;
+  width: 200px;
+  height: 300px;
+  margin: 30px;
+  padding: 5px;
+}
+
+.Res_card:hover {
+  cursor: pointer;
+  border: 1px solid #a07f7f;
+}
+
+.res_name {
+  width: 100%;
+  height: 200px;
+}
+
+.Res_block {
+  display: flex;
+}
+
+h5, h6 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.Res_container {
+  display: flex;
+}
+
+.filter {
+  margin-left: 40px;
+}
+/*# sourceMappingURL=FA.f8ccebd6.css.map */
