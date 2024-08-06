@@ -7,12 +7,22 @@ import React, { useState } from 'react';
 
 
 const Body=()=>{
+    const[List,setList]=useState(resList)
     return(
     <div className="body">
        
         <div className="search_bar">SEARCH
             <button className="filter"
-             onClick={()=>{resList = resList.filter((restaurants)=>restaurants.info.avgRating>4)}}
+            //  onClick={()=>{resList = resList.filter((restaurants)=>restaurants.info.avgRating>4)}}
+            onClick={()=>{
+                const filter=
+                List.filter(
+                    (res)=>(res.info.avgRating) > 4)
+                console.log(List)
+                setList(filter)
+                }
+                
+                }
             >
                 TOP RATED Restaurants
             </button>
@@ -34,7 +44,8 @@ const Body=()=>{
         <Res_card resData={res_obj[2]}/>
         <Res_card resData={res_obj[3]}/> */}
         {
-            resList.map((restaurants)=><Res_card key={restaurants.info.id} resData={restaurants}></Res_card>)
+            // resList.map((restaurants)=><Res_card key={restaurants.info.id} resData={restaurants}></Res_card>)
+            List.map((res)=><Res_card key={res.info.id} resData={res}></Res_card>)
         }
         
        
