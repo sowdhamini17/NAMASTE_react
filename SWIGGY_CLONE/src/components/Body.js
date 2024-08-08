@@ -1,13 +1,33 @@
 import resList from "../../utilis/mockdata";
 import Res_card from "./Res_card";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 
 
 
 const Body=()=>{
-    const[List,setList]=useState(resList)
+    const[List,setList]=useState([])
+    useEffect(()=>{
+        fetchData()
+    }
+    
+    ,[])
+
+    const fetchData =async()=>{
+        const data = await  fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.01420&lng=76.99410&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        const json= await data.json()
+        console.log(json)
+        console.log(json.data.cards[0].card.card);
+        setList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        
+        )
+  
+
+    }
+    if(List === 0){
+        return(<h1>loading</h1>)
+    }
     return(
     <div className="body">
        

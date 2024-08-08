@@ -27527,7 +27527,24 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
-    const [List, setList] = (0, _react.useState)((0, _mockdataDefault.default));
+    const [List, setList] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    const fetchData = async ()=>{
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.01420&lng=76.99410&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        console.log(json);
+        console.log(json.data.cards[0].card.card);
+        setList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    };
+    if (List === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "loading"
+    }, void 0, false, {
+        fileName: "SWIGGY_CLONE/src/components/Body.js",
+        lineNumber: 29,
+        columnNumber: 16
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
         children: [
@@ -27546,25 +27563,25 @@ const Body = ()=>{
                         children: "TOP RATED Restaurants"
                     }, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 15,
+                        lineNumber: 35,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                         children: "What's on your mind?"
                     }, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 29,
+                        lineNumber: 49,
                         columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "SWIGGY_CLONE/src/components/Body.js",
-                lineNumber: 14,
+                lineNumber: 34,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "SWIGGY_CLONE/src/components/Body.js",
-                lineNumber: 31,
+                lineNumber: 51,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27572,29 +27589,29 @@ const Body = ()=>{
                     "Pizza",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 34,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, undefined),
                     "Cheesilicious pizzas to make every day extraordinary.",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 36,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 37,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, undefined),
                     "Restaurants to explore",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 39,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 40,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27604,28 +27621,28 @@ const Body = ()=>{
                                 resData: res
                             }, res.info.id, false, {
                                 fileName: "SWIGGY_CLONE/src/components/Body.js",
-                                lineNumber: 48,
+                                lineNumber: 68,
                                 columnNumber: 29
                             }, undefined))
                     }, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 41,
+                        lineNumber: 61,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "SWIGGY_CLONE/src/components/Body.js",
-                lineNumber: 32,
+                lineNumber: 52,
                 columnNumber: 8
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "SWIGGY_CLONE/src/components/Body.js",
-        lineNumber: 12,
+        lineNumber: 32,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "ToooJ8EP8H2BctXSe0P3jzl2OGk=");
+_s(Body, "fKaIWDCuhw96u9vLCO+CuZM+830=");
 _c = Body;
 exports.default = Body;
 var _c;
