@@ -27259,7 +27259,12 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constants = require("../../utilis/constants");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
 const Header = ()=>{
+    _s();
+    const [btname, setBtname] = (0, _react.useState)("LOGIN");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "navbar",
         children: [
@@ -27270,12 +27275,12 @@ const Header = ()=>{
                     src: (0, _constants.LOGO_URL)
                 }, void 0, false, {
                     fileName: "SWIGGY_CLONE/src/components/Header.js",
-                    lineNumber: 7,
+                    lineNumber: 9,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "SWIGGY_CLONE/src/components/Header.js",
-                lineNumber: 6,
+                lineNumber: 8,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27285,43 +27290,53 @@ const Header = ()=>{
                         children: "Home"
                     }, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Header.js",
-                        lineNumber: 10,
+                        lineNumber: 12,
                         columnNumber: 12
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         children: "About Us"
                     }, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Header.js",
-                        lineNumber: 11,
+                        lineNumber: 13,
                         columnNumber: 12
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         children: "cart"
                     }, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Header.js",
-                        lineNumber: 12,
+                        lineNumber: 14,
                         columnNumber: 12
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         children: "Contact us"
                     }, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Header.js",
-                        lineNumber: 13,
+                        lineNumber: 15,
+                        columnNumber: 12
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "login_btn",
+                        onClick: ()=>setBtname("LOGOUT"),
+                        children: btname
+                    }, void 0, false, {
+                        fileName: "SWIGGY_CLONE/src/components/Header.js",
+                        lineNumber: 20,
                         columnNumber: 12
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "SWIGGY_CLONE/src/components/Header.js",
-                lineNumber: 9,
+                lineNumber: 11,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "SWIGGY_CLONE/src/components/Header.js",
-        lineNumber: 5,
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 };
+_s(Header, "OMiyFq1+1zr0lFjr4lIvrtE+tcg=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -27332,7 +27347,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../../utilis/constants":"lhR65","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lhR65":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../../utilis/constants":"lhR65","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lhR65":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
@@ -27524,6 +27539,8 @@ var _resCard = require("./Res_card");
 var _resCardDefault = parcelHelpers.interopDefault(_resCard);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _shimmerUI = require("./ShimmerUI");
+var _shimmerUIDefault = parcelHelpers.interopDefault(_shimmerUI);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
@@ -27538,14 +27555,12 @@ const Body = ()=>{
         console.log(json.data.cards[0].card.card);
         setList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
-    if (List === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "loading"
-    }, void 0, false, {
+    // condtional rendering
+    return List.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerUIDefault.default), {}, void 0, false, {
         fileName: "SWIGGY_CLONE/src/components/Body.js",
-        lineNumber: 29,
-        columnNumber: 16
-    }, undefined);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        lineNumber: 30,
+        columnNumber: 32
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27563,25 +27578,25 @@ const Body = ()=>{
                         children: "TOP RATED Restaurants"
                     }, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 35,
+                        lineNumber: 34,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                         children: "What's on your mind?"
                     }, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 49,
+                        lineNumber: 48,
                         columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "SWIGGY_CLONE/src/components/Body.js",
-                lineNumber: 34,
+                lineNumber: 33,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "SWIGGY_CLONE/src/components/Body.js",
-                lineNumber: 51,
+                lineNumber: 50,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27589,56 +27604,63 @@ const Body = ()=>{
                     "Pizza",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 54,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, undefined),
                     "Cheesilicious pizzas to make every day extraordinary.",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 56,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 57,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, undefined),
                     "Restaurants to explore",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 59,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 60,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "Res_container",
-                        children: // resList.map((restaurants)=><Res_card key={restaurants.info.id} resData={restaurants}></Res_card>)
-                        List.map((res)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCardDefault.default), {
-                                resData: res
-                            }, res.info.id, false, {
-                                fileName: "SWIGGY_CLONE/src/components/Body.js",
-                                lineNumber: 68,
-                                columnNumber: 29
-                            }, undefined))
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "card_block",
+                            children: // resList.map((restaurants)=><Res_card key={restaurants.info.id} resData={restaurants}></Res_card>)
+                            List.map((res)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCardDefault.default), {
+                                    resData: res
+                                }, res.info.id, false, {
+                                    fileName: "SWIGGY_CLONE/src/components/Body.js",
+                                    lineNumber: 69,
+                                    columnNumber: 29
+                                }, undefined))
+                        }, void 0, false, {
+                            fileName: "SWIGGY_CLONE/src/components/Body.js",
+                            lineNumber: 65,
+                            columnNumber: 9
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "SWIGGY_CLONE/src/components/Body.js",
-                        lineNumber: 61,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "SWIGGY_CLONE/src/components/Body.js",
-                lineNumber: 52,
+                lineNumber: 51,
                 columnNumber: 8
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "SWIGGY_CLONE/src/components/Body.js",
-        lineNumber: 32,
+        lineNumber: 31,
         columnNumber: 5
     }, undefined);
 };
@@ -27653,7 +27675,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../../utilis/mockdata":"fQMxZ","./Res_card":"jF6gh","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fQMxZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../../utilis/mockdata":"fQMxZ","./Res_card":"jF6gh","react":"21dqq","./ShimmerUI":"1iosq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fQMxZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 let resList = [
@@ -28213,7 +28235,129 @@ $RefreshReg$(_c, "Res_card");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../../utilis/constants":"lhR65","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hKKs3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../../utilis/constants":"lhR65","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1iosq":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5a8a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5a8a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const ShimmerUI = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "shimmer_container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 3,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 4,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 5,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 6,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 7,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 8,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 9,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 10,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 11,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 12,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 13,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 14,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer_card"
+            }, void 0, false, {
+                fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+                lineNumber: 15,
+                columnNumber: 4
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "SWIGGY_CLONE/src/components/ShimmerUI.js",
+        lineNumber: 2,
+        columnNumber: 12
+    }, undefined);
+};
+_c = ShimmerUI;
+exports.default = ShimmerUI;
+var _c;
+$RefreshReg$(_c, "ShimmerUI");
+
+  $parcel$ReactRefreshHelpers$5a8a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hKKs3":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6edd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

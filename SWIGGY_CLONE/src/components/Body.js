@@ -1,7 +1,7 @@
 import resList from "../../utilis/mockdata";
 import Res_card from "./Res_card";
 import React, { useEffect, useState } from 'react';
-
+import ShimmerUI from "./ShimmerUI";
 
 
 
@@ -25,10 +25,9 @@ const Body=()=>{
   
 
     }
-    if(List === 0){
-        return(<h1>loading</h1>)
-    }
-    return(
+    
+    // condtional rendering
+    return (List.length === 0)?<ShimmerUI/>:(
     <div className="body">
        
         <div className="search_bar">SEARCH
@@ -63,11 +62,13 @@ const Body=()=>{
         <Res_card resData={res_obj[1]}/>
         <Res_card resData={res_obj[2]}/>
         <Res_card resData={res_obj[3]}/> */}
+        <div className="card_block">
+
         {
             // resList.map((restaurants)=><Res_card key={restaurants.info.id} resData={restaurants}></Res_card>)
             List.map((res)=><Res_card key={res.info.id} resData={res}></Res_card>)
         }
-        
+        </div> 
        
        
         </div>

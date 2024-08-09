@@ -49,11 +49,29 @@ h5, h6 {
   margin-bottom: 1px;
 }
 
-.Res_container {
+.card_block {
+  flex-wrap: wrap;
   display: flex;
 }
 
 .filter {
   margin-left: 40px;
+}
+
+.shimmer_container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.shimmer_card {
+  background-color: #faebd7;
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+}
+
+.login_btn {
+  height: 30px;
+  margin: 20px;
 }
 /*# sourceMappingURL=FA.f8ccebd6.css.map */
