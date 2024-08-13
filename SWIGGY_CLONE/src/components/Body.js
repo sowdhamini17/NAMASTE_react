@@ -8,6 +8,8 @@ import ShimmerUI from "./ShimmerUI";
 
 const Body=()=>{
     const[List,setList]=useState([])
+    const[searchtxt,setSearchtxt]=useState("")
+    const[filteredRes,setFilteredRes]= useState([])
     useEffect(()=>{
         fetchData()
     }
@@ -19,10 +21,8 @@ const Body=()=>{
         const json= await data.json()
         console.log(json)
         console.log(json.data.cards[0].card.card);
-        setList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-        
-        )
-  
+        setList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
     }
     
@@ -30,7 +30,26 @@ const Body=()=>{
     return (List.length === 0)?<ShimmerUI/>:(
     <div className="body">
        
-        <div className="search_bar">SEARCH
+        <div className="search_bar">
+            <input type="text"
+             value={searchtxt} 
+             onChange={(e)=>{
+             setSearchtxt(e.target.value)
+             }}
+             >
+            
+            </input>
+            <button onClick={()=>{console.log(searchtxt)
+
+             const fl=List.filter(
+             (res)=>(res.info.name.toLowerCase().includes(searchtxt)) )
+             setFilteredRes(fl)
+            
+            }
+            
+            }>SEARCH</button>
+           
+           
             <button className="filter"
             //  onClick={()=>{resList = resList.filter((restaurants)=>restaurants.info.avgRating>4)}}
             onClick={()=>{
@@ -66,7 +85,7 @@ const Body=()=>{
 
         {
             // resList.map((restaurants)=><Res_card key={restaurants.info.id} resData={restaurants}></Res_card>)
-            List.map((res)=><Res_card key={res.info.id} resData={res}></Res_card>)
+            filteredRes.map((res)=><Res_card key={res.info.id} resData={res}></Res_card>)
         }
         </div> 
        
